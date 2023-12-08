@@ -7,3 +7,38 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+.container{
+    position: relative;
+      max-width: 1000px; /* Imposta la larghezza massima del container secondo le tue esigenze */
+      margin: auto;
+}
+
+.contenitore-img{
+    width: 100%;
+      overflow: hidden;
+}
+
+
+.contenitore-img > img{
+    width: 100%;
+      height: auto;
+      display: block;
+}
+
+.bottoni-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.bottone-nav {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff; /* Colore blu Bootstrap di default */
+  }
