@@ -1,10 +1,6 @@
 /*
 Dato un array contenente una lista di cinque immagini, creare un carosello come nello screenshot allegato.
 
-MILESTONE 2
-Adesso rimuoviamo tutto il markup statico e inseriamo tutte le immagini dinamicamente servendoci dell'array fornito e un semplice ciclo for che concatena un template literal.
-Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specifica che la renderà visibile.
-Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente attraverso JavaScript.
 MILESTONE 3
 Al click dell'utente sulle frecce, il programma cambierà l'immagine attiva, che quindi verrà visualizzata al posto della precedente.
 Prima di partire a scrivere codice:
@@ -16,4 +12,24 @@ Consigli del giorno:
 
 */
 
-const img [/]
+const img = [
+    'consegna/img/01.webp',
+    'consegna/img/02.webp',
+    'consegna/img/03.webp',
+    'consegna/img/04.webp',
+    'consegna/img/05.webp',
+];
+
+let result = '';
+
+for (let i = 0; i < img.length; i++) {
+
+    result += `<img src="${img[i]}" alt="Immagine ${i + 1}">`;
+
+  }
+
+  console.log(result);
+
+  const button = document.querySelector("input");
+
+  button.addEventListener("click",);
