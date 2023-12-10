@@ -32,4 +32,28 @@ for (let i = 0; i < img.length; i++) {
 
   const button = document.querySelector("input");
 
-  button.addEventListener("click",);
+  button.addEventListener("click", function() {
+    alert("Il pulsante è stato cliccato!");
+    
+    });
+
+    let immagineCorrente = 0;
+    const imgContainer = document.querySelector('.contenitore-img > img');
+    const rightButton = document.querySelector('.bottone-nav-dx');
+    const leftButton = document.querySelector('.bottone-nav-sx');
+
+    function updateImage() {
+        imgContainer.src = img[immagineCorrente];
+    }
+    
+    rightButton.addEventListener('click', function () {
+        immagineCorrente = (immagineCorrente + 1) % img.length;
+        updateImage();
+    });
+    
+    leftButton.addEventListener('click', function () {
+        immagineCorrente = (immagineCorrente - 1 + img.length) % img.length;
+        updateImage();
+    });
+
+    updateImage();
