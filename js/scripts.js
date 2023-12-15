@@ -1,14 +1,15 @@
 /*
-Dato un array contenente una lista di cinque immagini, creare un carosello come nello screenshot allegato.
-
-MILESTONE 3
-Al click dell'utente sulle frecce, il programma cambierà l'immagine attiva, che quindi verrà visualizzata al posto della precedente.
-Prima di partire a scrivere codice:
-Non lasciamoci spaventare dalla complessità apparente dell'esercizio, ma analizziamo prima, come abbiamo fatto sempre, cosa ci potrebbe aspettare. Abbiamo completato ormai da qualche giorno la sessione HTML e CSS, se non ci ricordiamo qualcosa andiamo pure a riguardare alcuni argomenti. Non dedichiamo però al ripasso più di una mezz'ora, così da non perdere di vista il focus dell'esercizio.
-Consigli del giorno:
-1. Costruiamo del carosello una versione statica contenente solamente un'immagine. Di questa versione statica al momento opportuno commenteremo (oscureremo) alcuni elementi per poterli riprodurre dinamicamente in js. Potremo quindi usarli come "template".
-2. Scriviamo sempre prima per punti il nostro algoritmo in italiano per capire cosa vogliamo fare
-3. Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
+Riprendete l'esercizio del carosello e aggiungete la funzionalità di autoplay:
+Quando si carica la pagina, le slide iniziano a scorrere da sole ogni 3 secondi
+BONUS
+Aggiungere il "ciclo infinito" sul carosello (cioè dall'ultima slide passo alla prima e viceversa)
+Aggiungere un pulsante per fermare l'avanzamento automatico
+Consigli del giorno: :party_wizard:
+Scriviamo prima cosa vogliamo fare passo passo in italiano, dividiamo il lavoro in micro problemi.
+Ad esempio:
+Di cosa ho bisogno per generare i numeri?
+Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
+Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 */
 
@@ -57,3 +58,10 @@ for (let i = 0; i < img.length; i++) {
     });
 
     updateImage();
+
+    setInterval(myFunction, 3000);
+
+    function myFunction(){
+        immagineCorrente = (immagineCorrente + 1) % img.length;
+        updateImage();
+    }
